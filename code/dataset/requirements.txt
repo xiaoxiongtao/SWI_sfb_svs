@@ -1,0 +1,19 @@
+# SCLC/LCNEC 病理 WSI 预处理依赖
+# pip install -r requirements.txt
+
+numpy>=1.24
+opencv-python>=4.8        # 组织检测（Otsu/形态学）、PNG 编码、QC 拼图
+
+# --- KFB 读取（江丰生物 KFBIO 切片）---
+kfbslide>=0.3.2           # 纯 Python，提供 OpenSlide 兼容 API
+
+# --- 其它格式（可选，处理 SVS/NDPI 时才需要）---
+# 官方方案：openslide-python + OpenSlide 原生库（Windows 上 conda 最省事）
+#   conda install -c conda-forge openslide openslide-python
+openslide-python>=1.3.1
+tiffslide>=3.0.1          # 免原生依赖的纯 Python 回退
+
+# --- 仅 make_labels.py 需要 ---
+pandas>=2.0
+xlrd>=2.0.1               # 读 .xls
+openpyxl>=3.1             # 读 .xlsx
