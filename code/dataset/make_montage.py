@@ -11,6 +11,12 @@
   python make_montage.py --manifest data/manifest.csv --out data/qc/montage.jpg
   python make_montage.py --manifest data/manifest.csv --slide R2301108 --n 36
   python make_montage.py --manifest data/manifest.csv --sort tissue_frac --reverse
+
+  or
+  
+  python ./code/dataset/make_montage.py --manifest data/manifest.csv --out data/qc/montage.jpg
+  python ./code/dataset/make_montage.py --manifest data/manifest.csv --slide R2301108 --n 36
+  python ./code/dataset/make_montage.py --manifest data/manifest.csv --sort tissue_frac --reverse
 """
 from __future__ import annotations
 
